@@ -223,7 +223,7 @@ footer { padding:34px 0 48px; border-top:1px solid var(--line); color:#6b7890; f
 <a href="#features">Features</a>
 <a href="#how">How it helps</a>
 <a href="#faq">FAQ</a>
-<a class="nav-cta" href="#waitlist">Join Waitlist</a>
+<a class="nav-cta" href="https://play.google.com/store/apps/details?id=com.mkumar.scrolllok" rel="noopener" target="_blank">Download App</a>
 </div>
 </div>
 </nav>
@@ -236,7 +236,7 @@ footer { padding:34px 0 48px; border-top:1px solid var(--line); color:#6b7890; f
 <p>ScrollLok helps you block distracting apps during the hours you choose — so study time stays focused, bedtime stays restful, and your day stays on track.</p>
 <div class="buttons">
 <a class="btn play-badge-link" href="https://play.google.com/store/apps/details?id=com.mkumar.scrolllok" rel="noopener" target="_blank"><img alt="Get it on Google Play" class="google-play-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/></a>
-<a class="btn" href="#waitlist">Notify me at launch</a>
+<a class="btn" href="https://play.google.com/store/apps/details?id=com.mkumar.scrolllok" rel="noopener" target="_blank">Get it on Google Play</a>
 </div>
 <div class="store">Android app • Free while testing • No account needed</div>
 </div>
@@ -300,27 +300,21 @@ footer { padding:34px 0 48px; border-top:1px solid var(--line); color:#6b7890; f
 <span class="check">?</span><div><h3>Who is ScrollLok for?</h3><p>ScrollLok is for anyone who wants practical tools to reduce distracting app use and build healthier digital routines.</p></div>
 </article>
 <article class="feature">
-<span class="check">?</span><div><h3>Where can I get ScrollLok?</h3><p>ScrollLok is available on Android through Google Play during its testing period. You can also join the launch waiting list.</p></div>
+<span class="check">?</span><div><h3>Where can I get ScrollLok?</h3><p>ScrollLok is available for Android on Google Play. Download it and try it free for 7 days.</p></div>
 </article>
 </div>
 </div>
 </section>
-<section aria-labelledby="waitlist-title" class="section" id="waitlist">
+<section aria-labelledby="download-title" class="section" id="download">
 <div class="container">
 <div class="waitlist">
 <div class="waitlist-grid">
 <div>
-<h2 id="waitlist-title">Be first to know when ScrollLok launches.</h2>
-<p>Join the waiting list and we'll notify you when the app is ready.</p>
+<h2 id="download-title">ScrollLok is now on Google Play.</h2>
+<p>Download the app and start blocking distracting apps on your schedule. Try it free for 7 days — no payment needed.</p>
 </div>
 <div>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSepab8ofFLWVxxjk1tnLQoR1x21XR8QLvnQAkU8MLWJhgM7nQ/formResponse" id="waitlistForm" method="POST" target="scrolllokGoogleFormFrame">
-<input aria-label="Email address" autocomplete="email" id="email" name="entry.270001116" placeholder="Your email address" required="" type="email"/>
-<button id="notifyButton" type="submit">Notify Me</button>
-</form>
-<iframe id="scrolllokGoogleFormFrame" name="scrolllokGoogleFormFrame" style="display:none" title="Hidden Google Forms submission"></iframe>
-<div class="success" id="success">You're on the list! We'll notify you when ScrollLok is live.</div>
-<div class="form-note">We'll use your email to send ScrollLok launch updates.</div>
+<a class="btn play-badge-link" href="https://play.google.com/store/apps/details?id=com.mkumar.scrolllok" rel="noopener" target="_blank"><img alt="Get it on Google Play" class="google-play-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/></a>
 </div>
 </div>
 </div>
@@ -333,30 +327,5 @@ footer { padding:34px 0 48px; border-top:1px solid var(--line); color:#6b7890; f
 <div><a class="btn play-badge-link" href="https://play.google.com/store/apps/details?id=com.mkumar.scrolllok" rel="noopener" target="_blank"><img alt="Get it on Google Play" class="google-play-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"/></a></div>
 </div>
 </footer>
-<script>
-const form = document.getElementById('waitlistForm');
-const email = document.getElementById('email');
-const success = document.getElementById('success');
-const notifyButton = document.getElementById('notifyButton');
-
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const value = email.value.trim();
-  if (!value) return;
-
-  // Submit directly to Google Forms in a hidden iframe so the visitor
-  // stays on the ScrollLok website.
-  notifyButton.disabled = true;
-  notifyButton.textContent = 'Joining...';
-  HTMLFormElement.prototype.submit.call(form);
-
-  // Google Forms accepts the POST while the page remains in place.
-  // Show the confirmation after the submission has been sent.
-  setTimeout(function() {
-    form.style.display = 'none';
-    success.style.display = 'block';
-  }, 700);
-});
-</script>
 </body>
 </html>
